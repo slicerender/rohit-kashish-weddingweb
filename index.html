@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>शुभ विवाह | रोहित ❤️ काशिश</title>
+
+<!-- Hindi Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===================================
+   1. GLOBAL DESIGN
+=================================== */
+
+:root {
+    --ivory: #fffaf0;
+    --cream: #f8f0df;
+    --gold: #bd9858;
+    --gold-dark: #8c692f;
+    --rose: #b87576;
+    --pink: #e7c4bd;
+    --green: #829779;
+    --brown: #634b36;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif Devanagari', serif;
+    color: var(--brown);
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--ivory);
+
+    /* Soft floral background texture */
+    background-image:
+        radial-gradient(ellipse at 10% 15%,
+        #ead5bc80 0%, transparent 35%),
+        radial-gradient(ellipse at 90% 85%,
+        #e9c9c480 0%, transparent 35%),
+        radial-gradient(ellipse at 85% 10%,
+        #dce3d180 0%, transparent 30%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            #d4b98508 21px
+        );
+}
+
+/* ===================================
+   2. DECORATIVE FLOWER BACKGROUND
+=================================== */
+
+.background-decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.flower {
+    position: absolute;
+    color: #c5a16c;
+    opacity: .17;
+    font-size: 100px;
+}
+
+.flower.one {
+    top: 2%;
+    left: -25px;
+}
+
+.flower.two {
+    top: 40%;
+    right: -35px;
+    color: #bd8980;
+}
+
+.flower.three {
+    bottom: 0;
+    left: 5%;
+    font-size: 75px;
+}
+
+.leaf-decoration {
+    position: absolute;
+    font-size: 75px;
+    opacity: .14;
+    color: #788b69;
+}
+
+.leaf-one {
+    top: 20%;
+    right: 2%;
+    transform: rotate(35deg);
+}
+
+.leaf-two {
+    bottom: 15%;
+    left: -15px;
+    transform: rotate(-35deg);
+}
+
+/* ===================================
+   3. FLOATING FLOWER PETALS
+=================================== */
+
+.petal {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    color: #c78c8c;
+    z-index: 30;
+    opacity: .55;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* ===================================
+   ENVELOPE / WEDDING CARD ENTRY SCREEN
+=================================== */
+
+.envelope-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #fffdfa 0%, #f1e2c9 100%);
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.envelope-wrapper.opened {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.sealed-card {
+    position: relative;
+    width: min(92vw, 420px);
+    height: 290px;
+    background: linear-gradient(135deg, #fff7eb, #f4e3c7);
+    border: 3px double var(--gold);
+    box-shadow: 0 25px 60px rgba(114, 85, 44, 0.35);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sealed-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 70px rgba(114, 85, 44, 0.45);
+}
+
+.wax-seal {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #c83939, #851b1b);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f7e6c4;
+    font-size: 34px;
+    font-weight: bold;
+    border: 2px dashed #e99595;
+    margin-bottom: 16px;
+    animation: sealGlow 2.5s infinite alternate;
+}
+
+@keyframes sealGlow {
+    from {
+        box-shadow: 0 0 10px rgba(200, 57, 57, 0.4);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(200, 57, 57, 0.8);
+    }
+}
+
+.card-callout {
+    font-family: 'Yatra One', cursive;
+    color: var(--gold-dark);
+    font-size: 26px;
+    margin-top: 6px;
+}
+
+.card-instruction {
+    font-size: 14px;
+    color: #7b5937;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* ===================================
+   4. PAGE SYSTEM
+=================================== */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 15px;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px;
+}
+
+.page.active {
+    display: flex;
+    animation: pageTurn .8s ease;
+}
+
+@keyframes pageTurn {
+    from {
+        opacity: 0;
+        transform: rotateY(-12deg) translateX(25px);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0) translateX(0);
+    }
+}
+
+/* ===================================
+   5. ROYAL INVITATION CARD
+=================================== */
+
+.card {
+    position: relative;
+    width: min(100%, 820px);
+    min-height: 720px;
+    padding: 42px 34px;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f8efdf,
+            #fffaf2
+        );
+    border: 2px solid var(--gold);
+    outline: 1px solid #d8bc85;
+    outline-offset: -11px;
+    box-shadow:
+        0 15px 55px #72552c20,
+        inset 0 0 40px #e6d5b34a;
+    overflow: hidden;
+}
+
+/* Decorative card corners */
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: "❀ ✧ ❀";
+    font-size: 27px;
+    color: var(--gold);
+    z-index: 2;
+}
+
+.card::before {
+    top: 15px;
+    left: 17px;
+}
+
+.card::after {
+    bottom: 15px;
+    right: 17px;
+}
+
+/* Inner decorative floral pattern */
+
+.card-decoration {
+    position: absolute;
+    pointer-events: none;
+    opacity: .12;
+    color: var(--gold-dark);
+    font-size: 85px;
+}
+
+.card-decoration.top-right {
+    top: 30px;
+    right: 25px;
+}
+
+.card-decoration.bottom-left {
+    bottom: 25px;
+    left: 25px;
+}
+
+/* ===================================
+   6. GANESHA DESIGN
+=================================== */
+
+.ganesha {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 5px auto 12px;
+    display: block;
+    filter: drop-shadow(0 3px 5px #a47d4140);
+}
+
+.ganesha-fallback {
+    color: var(--gold-dark);
+    font-size: 55px;
+    margin: 10px;
+}
+
+/* ===================================
+   7. TYPOGRAPHY
+=================================== */
+
+h1 {
+    font-family: 'Yatra One', cursive;
+    color: var(--gold-dark);
+    font-weight: 400;
+    font-size: clamp(34px, 7vw, 58px);
+    margin: 14px 0;
+}
+
+h2 {
+    color: var(--gold-dark);
+}
+
+.names {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: clamp(30px, 6vw, 47px);
+    color: #985e5a;
+    margin: 16px 0;
+}
+
+.heart {
+    color: #bd7479;
+    margin: 0 8px;
+}
+
+.small-title {
+    color: #9c783f;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 2.1;
+    color: var(--brown);
+}
+
+.ornament {
+    font-size: 27px;
+    color: var(--gold);
+    margin: 13px 0;
+    letter-spacing: 8px;
+}
+
+.gold-line {
+    width: 65%;
+    height: 1px;
+    margin: 22px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+/* ===================================
+   8. CINEMATIC VIDEO FRAME (WIDER & ADJUSTED)
+=================================== */
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    height: 360px;
+    margin: 24px auto;
+    padding: 7px;
+    border: 2px solid var(--gold);
+    background: #fff;
+    box-shadow:
+        0 12px 35px #71542c30,
+        inset 0 0 10px #e5d0a5;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.cover-frame {
+    height: 390px;
+    max-width: 600px;
+}
+
+.video-frame video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ===================================
+   9. EVENT COLOURS
+=================================== */
+
+.haldi .card {
+    background:
+        linear-gradient(
+            135deg,
+            #fff9e7,
+            #fff0c9,
+            #fffaf0
+        );
+}
+
+.mehendi .card {
+    background:
+        linear-gradient(
+            135deg,
+            #faf9ec,
+            #eaf0df,
+            #fffaf0
+        );
+}
+
+.wedding .card {
+    background:
+        linear-gradient(
+            135deg,
+            #fff6ed,
+            #f5e3d8,
+            #fffaf0
+        );
+}
+
+.haldi .event-label {
+    color: #a57c26;
+}
+
+.mehendi .event-label {
+    color: #657c52;
+}
+
+.wedding .event-label {
+    color: #984e4d;
+}
+
+/* ===================================
+   10. BUTTONS
+=================================== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    margin: 10px 5px;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    background: linear-gradient(
+        135deg,
+        #c7a465,
+        #97703c
+    );
+    box-shadow: 0 5px 16px #98733a30;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--gold-dark);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--gold-dark);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.open-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ===================================
+   11. EVENT & VENUE INFORMATION
+=================================== */
+
+.event-label {
+    display: inline-block;
+    padding: 8px 23px;
+    margin: 10px;
+    border: 1px solid var(--gold);
+    color: var(--gold-dark);
+    letter-spacing: 2px;
+}
+
+.event-date {
+    font-size: 27px;
+    color: #a77b42;
+    margin: 16px;
+}
+
+.venue {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #7b4528;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.address {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #5d4632;
+    margin-bottom: 12px;
+}
+
+/* Embedded Google Map */
+
+.map-container {
+    width: 100%;
+    max-width: 580px;
+    height: 250px;
+    margin: 16px auto;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(114, 85, 44, 0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===================================
+   12. MUSIC CONTROL
+=================================== */
+
+.music-button {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 100;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fffaf0;
+    border: 1px solid var(--gold);
+    color: var(--gold-dark);
+    font-size: 22px;
+    box-shadow: 0 5px 15px #0002;
+    cursor: pointer;
+}
+
+/* ===================================
+   13. PAGE NAVIGATION
+=================================== */
+
+.navigation {
+    margin-top: 22px;
+}
+
+.page-number {
+    margin-top: 18px;
+    color: var(--gold-dark);
+    font-size: 13px;
+}
+
+/* ===================================
+   14. MOBILE RESPONSIVENESS
+=================================== */
+
+@media(max-width: 600px) {
+
+    .page {
+        padding: 20px 9px;
+    }
+
+    .card {
+        padding: 32px 17px;
+        min-height: 610px;
+    }
+
+    .cover-frame {
+        height: 280px;
+        max-width: 100%;
+    }
+
+    .video-frame {
+        height: 245px;
+        max-width: 100%;
+    }
+
+    .venue {
+        font-size: 21px;
+    }
+
+    .address {
+        font-size: 15px;
+    }
+
+    .map-container {
+        height: 200px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 11px 17px;
+        font-size: 13px;
+    }
+
+    .ganesha {
+        width: 72px;
+        height: 72px;
+    }
+
+    .event-date {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND DECORATIONS -->
+
+<div class="background-decoration">
+
+    <div class="flower one">❀</div>
+    <div class="flower two">✿</div>
+    <div class="flower three">❁</div>
+
+    <div class="leaf-decoration leaf-one">❧</div>
+    <div class="leaf-decoration leaf-two">❦</div>
+
+</div>
+
+
+<!-- WEDDING CARD / ENVELOPE ENTRY SCREEN -->
+
+<div class="envelope-wrapper" id="envelopeScreen" onclick="unwrapCard()">
+
+    <div class="sealed-card">
+        <div class="wax-seal">ॐ</div>
+        <p class="small-title">॥ श्री गणेशाय नमः ॥</p>
+        <div class="card-callout">शुभ विवाह निमंत्रण पत्र</div>
+        <div class="names" style="font-size: 24px; margin: 8px 0;">
+            रोहित <span class="heart">♥</span> काशिश
+        </div>
+        <p class="card-instruction">✨ निमंत्रण पत्र खोलने के लिए यहाँ स्पर्श करें ✨</p>
+    </div>
+
+</div>
+
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="music" loop preload="none">
+    <source src="assets/wedding-music.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    class="music-button"
+    id="musicBtn"
+    onclick="toggleMusic()"
+    aria-label="संगीत चालू या बंद करें"
+>
+    ♫
+</button>
+
+
+<!-- ===================================
+     PAGE 1: ROYAL COVER
+=================================== -->
+
+<section class="page active" id="page0">
+
+    <div class="card cover-card">
+
+        <div class="card-decoration top-right">❀</div>
+
+        <div class="ornament">✧ ❀ ✧</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <p class="small-title">
+            ॥ श्री गणेशाय नमः ॥
+        </p>
+
+        <h1>शुभ विवाह</h1>
+
+        <p class="subtitle">
+            दो दिलों का मिलन, सात जन्मों का बंधन
+        </p>
+
+        <div class="video-frame cover-frame">
+
+            <video
+                id="coverVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/cover-poster.jpg"
+            >
+                <source src="assets/cover.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="names">
+            रोहित <span class="heart">♥</span> काशिश
+        </div>
+
+        <div class="gold-line"></div>
+
+        <p class="subtitle">
+            दो परिवारों के स्नेह और आशीर्वाद से<br>
+            एक नई शुरुआत के इस शुभ अवसर पर<br>
+            आपका हार्दिक स्वागत है।
+        </p>
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <button class="btn open-btn" onclick="openInvitation()">
+            ✨ आमंत्रण खोलने के लिए स्पर्श करें ✨
+        </button>
+
+        <p class="page-number">
+            एक सुंदर रिश्ते की शुरुआत...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     PAGE 2: INVITATION
+=================================== -->
+
+<section class="page" id="page1">
+
+    <div class="card">
+
+        <div class="card-decoration top-right">❀</div>
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <p class="small-title">सप्रेम आमंत्रण</p>
+
+        <h1>मंगल परिणय</h1>
+
+        <div class="gold-line"></div>
+
+        <p class="subtitle">
+            ईश्वर की असीम कृपा एवं अपने समस्त<br>
+            परिवारजनों के आशीर्वाद से
+        </p>
+
+        <div class="names">
+            रोहित <span class="heart">♥</span> काशिश
+        </div>
+
+        <p class="subtitle">
+            के शुभ विवाह के पावन अवसर पर<br>
+            आप सपरिवार सादर आमंत्रित हैं।
+        </p>
+
+        <div class="gold-line"></div>
+
+        <p class="subtitle">
+            आपकी उपस्थिति हमारे इस शुभ अवसर को<br>
+            और भी यादगार बनाएगी।
+        </p>
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <div class="navigation">
+
+            <button class="btn" onclick="goToPage(2)">
+                आगे बढ़ें →
+            </button>
+
+        </div>
+
+        <p class="page-number">पृष्ठ 2 / 6</p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     PAGE 3: HALDI
+=================================== -->
+
+<section class="page haldi" id="page2">
+
+    <div class="card">
+
+        <div class="ornament">🌼 ❀ 🌼</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <span class="event-label">
+            पीला रंग, खुशियों के संग
+        </span>
+
+        <h1>हल्दी समारोह</h1>
+
+        <div class="video-frame">
+
+            <video
+                class="eventVideo"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="assets/haldi-poster.jpg"
+            >
+                <source src="assets/haldi.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <p class="subtitle">
+            हल्दी की खुशबू, अपनों का प्यार,<br>
+            खुशियों से सजेगा यह त्योहार।
+        </p>
+
+        <div class="event-date">
+            ०७ जनवरी २०२७
+        </div>
+
+        <p class="subtitle">गुरुवार</p>
+
+        <div class="ornament">🌼 ❀ 🌼</div>
+
+        <div class="navigation">
+
+            <button class="btn btn-outline" onclick="goToPage(1)">
+                ← पिछला
+            </button>
+
+            <button class="btn" onclick="goToPage(3)">
+                अगला →
+            </button>
+
+        </div>
+
+        <p class="page-number">पृष्ठ 3 / 6</p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     PAGE 4: MEHENDI
+=================================== -->
+
+<section class="page mehendi" id="page3">
+
+    <div class="card">
+
+        <div class="ornament">🌿 ❀ 🌿</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <span class="event-label">
+            मेहंदी की रौनक
+        </span>
+
+        <h1>मेहंदी समारोह</h1>
+
+        <div class="video-frame">
+
+            <video
+                class="eventVideo"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="assets/mehendi-poster.jpg"
+            >
+                <source src="assets/mehendi.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <p class="subtitle">
+            हाथों में मेहंदी, चेहरे पर मुस्कान,<br>
+            सखियों संग सजेगा खुशियों का जहान।
+        </p>
+
+        <div class="event-date">
+            ०८ जनवरी २०२७
+        </div>
+
+        <p class="subtitle">शुक्रवार</p>
+
+        <div class="ornament">🌿 ❀ 🌿</div>
+
+        <div class="navigation">
+
+            <button class="btn btn-outline" onclick="goToPage(2)">
+                ← पिछला
+            </button>
+
+            <button class="btn" onclick="goToPage(4)">
+                अगला →
+            </button>
+
+        </div>
+
+        <p class="page-number">पृष्ठ 4 / 6</p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     PAGE 5: WEDDING & LOCATION WITH MAP
+=================================== -->
+
+<section class="page wedding" id="page4">
+
+    <div class="card">
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <span class="event-label">शुभ विवाह</span>
+
+        <h1>सात फेरे</h1>
+
+        <div class="video-frame">
+
+            <video
+                class="eventVideo"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="assets/wedding-poster.jpg"
+            >
+                <source src="assets/wedding.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <p class="subtitle">
+            अग्नि को साक्षी मानकर,<br>
+            सात वचनों के संग,<br>
+            दो जीवन एक बंधन में बंधेंगे।
+        </p>
+
+        <div class="names">
+            रोहित <span class="heart">♥</span> काशिश
+        </div>
+
+        <div class="event-date">
+            ०९ जनवरी २०२७
+        </div>
+
+        <p class="subtitle">शनिवार</p>
+
+        <div class="gold-line"></div>
+
+        <!-- Enhanced Venue Section -->
+        <p class="venue">
+            श्री राजा राम होटल एंड रिसॉर्ट
+        </p>
+
+        <p class="address">
+            5P7R+WG, उज्जैन, मध्य प्रदेश – 456006
+        </p>
+
+        <!-- Embedded Google Map -->
+        <div class="map-container">
+            <iframe
+                title="Google Map Venue Location"
+                src="https://maps.google.com/maps?q=Shree+Raja+Ram+Hotel+and+Resort+Ujjain+Madhya+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <button
+            class="btn"
+            onclick="window.open('https://www.google.com/maps/search/?api=1&query=Shree+Raja+Ram+Hotel+and+Resort+Ujjain+Madhya+Pradesh','_blank')"
+        >
+            📍 गूगल मैप पर दिशा-निर्देश देखें
+        </button>
+
+        <div class="navigation">
+
+            <button class="btn btn-outline" onclick="goToPage(3)">
+                ← पिछला
+            </button>
+
+            <button class="btn" onclick="goToPage(5)">
+                अगला →
+            </button>
+
+        </div>
+
+        <p class="page-number">पृष्ठ 5 / 6</p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     PAGE 6: THANK YOU
+=================================== -->
+
+<section class="page" id="page5">
+
+    <div class="card">
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <img
+            src="assets/ganesha.png"
+            class="ganesha"
+            alt="श्री गणेश"
+        >
+
+        <p class="small-title">
+            आपका हार्दिक स्वागत है
+        </p>
+
+        <h1>शुभाशीष</h1>
+
+        <div class="names">
+            रोहित <span class="heart">♥</span> काशिश
+        </div>
+
+        <div class="gold-line"></div>
+
+        <p class="subtitle">
+            आपकी शुभकामनाएँ और आशीर्वाद<br>
+            हमारे नए जीवन की सबसे अनमोल भेंट हैं।
+        </p>
+
+        <div style="font-size:55px;margin:25px;">
+            🪔
+        </div>
+
+        <h2 style="font-family:'Yatra One';">
+            सादर धन्यवाद!
+        </h2>
+
+        <p class="subtitle" style="margin-top:20px;">
+            आपका आगमन हमारे लिए सौभाग्य की बात होगी।<br>
+            प्रेम एवं स्नेह सहित।
+        </p>
+
+        <div class="ornament">❀ ✧ ❀</div>
+
+        <button class="btn" onclick="goToPage(0)">
+            ↻ निमंत्रण पुनः देखें
+        </button>
+
+        <p class="page-number">पृष्ठ 6 / 6</p>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     JAVASCRIPT
+=================================== -->
+
+<script>
+
+// Current page
+let currentPage = 0;
+const totalPages = 6;
+
+
+// -----------------------------------
+// UNWRAP / OPEN SHADI CARD ON ENTRY
+// -----------------------------------
+
+function unwrapCard() {
+    const envelope = document.getElementById("envelopeScreen");
+    envelope.classList.add("opened");
+
+    const music = document.getElementById("music");
+    music.play().then(() => {
+        document.getElementById("musicBtn").innerHTML = "♫";
+    }).catch(error => {
+        console.log("Music playback requires user interaction.");
+    });
+
+    manageVideos();
+}
+
+
+// -----------------------------------
+// OPEN INVITATION (FROM COVER TO DETAILS)
+// -----------------------------------
+
+function openInvitation() {
+    const music = document.getElementById("music");
+
+    music.play().then(() => {
+        document.getElementById("musicBtn").innerHTML = "♫";
+    }).catch(error => {
+        console.log("Music playback requires user interaction.");
+    });
+
+    goToPage(1);
+}
+
+
+// -----------------------------------
+// PAGE NAVIGATION
+// -----------------------------------
+
+function goToPage(pageNumber) {
+
+    if (pageNumber < 0 || pageNumber >= totalPages) {
+        return;
+    }
+
+    // Hide all pages
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    // Update current page
+    currentPage = pageNumber;
+
+    const nextPage = document.getElementById("page" + pageNumber);
+
+    // Restart transition
+    void nextPage.offsetWidth;
+
+    nextPage.classList.add("active");
+
+    // Stop hidden videos and play visible video
+    manageVideos();
+
+    // Scroll to top
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+// -----------------------------------
+// VIDEO MANAGEMENT
+// -----------------------------------
+
+function manageVideos() {
+
+    document.querySelectorAll("video").forEach(video => {
+
+        const parentPage = video.closest(".page");
+
+        if (
+            parentPage &&
+            parentPage.classList.contains("active")
+        ) {
+            video.play().catch(() => {});
+        } else {
+            video.pause();
+        }
+
+    });
+
+}
+
+
+// -----------------------------------
+// MUSIC ON/OFF
+// -----------------------------------
+
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicBtn");
+
+    if (music.paused) {
+        music.play().then(() => {
+            button.innerHTML = "♫";
+        }).catch(() => {});
+    } else {
+        music.pause();
+        button.innerHTML = "♪";
+    }
+
+}
+
+
+// -----------------------------------
+// FLOATING FLOWER PETALS
+// -----------------------------------
+
+function createPetals() {
+
+    const symbols = ["✿", "❀", "✽", "❁"];
+
+    for (let i = 0; i < 15; i++) {
+
+        const petal = document.createElement("div");
+        petal.className = "petal";
+        petal.innerHTML =
+            symbols[
+                Math.floor(Math.random() * symbols.length)
+            ];
+
+        petal.style.left =
+            Math.random() * 100 + "vw";
+
+        petal.style.animationDuration =
+            (8 + Math.random() * 10) + "s";
+
+        petal.style.animationDelay =
+            (Math.random() * 10) + "s";
+
+        petal.style.fontSize =
+            (12 + Math.random() * 18) + "px";
+
+        document.body.appendChild(petal);
+
+    }
+
+}
+
+
+// -----------------------------------
+// INITIALIZE WEBSITE
+// -----------------------------------
+
+createPetals();
+
+</script>
+
+</body>
+</html>
